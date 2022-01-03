@@ -1,54 +1,31 @@
-# Alpine.js
+# Landing Starter Template using TailwindCSS and AlpineJs
 
-Go to the Alpine docs for most things: [Alpine Docs](https://alpinejs.dev)
+An opinionated starter template based on Tailwind CSS, Alpine.js, postcss and esbuild.
 
-You are welcome to submit updates to the docs by submitting a PR to this repo. Docs are located in the [`/packages/docs`](/packages/docs) directory.
+It is an opinionated template that has the following features:
 
-Stay here for contribution-related information.
+- Tailwind CSS for styling
+- Alpine.js for template/dynamic logic
+- a simple build system which may help me scale up if the needs arise (for example, add scss for styles or Typescript)
 
-> Looking for V2 docs? [here they are](https://github.com/alpinejs/alpine/tree/v2.8.2)
+[Tailwind CSS](https://tailwindcss.com/) is a highly customizable, low-level CSS framework that is gaining popularity lately.  It is not opinionated as it gives you the building blocks for styling your components.
 
-<p align="center"><a href="https://alpinejs.dev/patterns"><img src="/hero.jpg" alt="Alpine Compoenent Patterns"></a></p>
+[Alpine.js](https://github.com/alpinejs/alpine) is very similar to tailwind but for the javascript. It provides the features of [Vue.js](https://vuejs.org/) with a much lower cost and - I think - a most suitable replacement for [jQuery](https://jquery.com/) than other frameworks.
 
-## Contribution Guide:
+For an HTML starter base, the gorgeous, simple, and versatile landing page design from the [Creative Tim's Tailwind Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)  is used.
 
-### Quickstart
+During the development (for the watch mode) use:
 
-* clone this repo locally
-* run `npm install` & `npm run build`
-* Include the `/packages/alpinejs/dist/cdn.js` file from a `<script>` tag on a webpage and you're good to go!
+```shell
+npm start
+```
 
-### Brief Tour
-You can get everything installed with: `npm install` in the root directory of this repo after cloning it locally.
+For deployment, run:
 
-This repo is a "mono-repo" using npm workspaces for managing the packages. Each package has its own folder in the `/packages` directory.
+```shell
+npm run deploy
+```
 
-Rather than having to run separate builds for each package, all package bundles are handled with the same command: `npm run build`
+The output web page is at `dist` folder.
 
-Here's a brief look at each package in this repo:
-
-Package | Description
---- | ---
-[alpinejs](packages/alpinejs) | The main Alpine repo with all of Alpine's core
-[csp](packages/csp) | A repo to provide a "CSP safe" build of Alpine
-[history](packages/history) | A plugin for binding data to query string parameters using the history API (name is likely to change)
-[intersect](packages/intersect) | A plugin for triggering JS expressions based on elements intersecting with the viewport
-[morph](packages/morph) | A plugin for morphing HTML (like morphdom) inside the page intelligently
-[trap](packages/trap) | A plugin that allows you to conditionally trap focus inside an element
-
-The compiled JS files (as a result of running `npm run [build/watch]`) to be included as a `<script>` tag for example are stored in each package's `packages/[package]/dist` directory.
-
-Each package should at least have: a "cdn" build that is self-initializing and can be included using the `src` attribute in a `<script defer>` tag, and a `module.[esm/cjs].js` file that is used for importing as a JS module (cjs for node, esm for everything else).
-
-The bundling for Alpine V3 is handled exclusively by ESBuild. All of the configuration for these builds is stored in the `scripts/build.js` file.
-
-### Testing
-There are 2 different testing tools used in this repo: Cypress (for integration tests), and Jest (for unit tests).
-
-All tests are stored inside the `/tests` folder under `/tests/cypress` and `/tests/jest`.
-
-You can run them both from the command line using: `npm run test`
-
-If you wish to only run cypress and open it's user interface (recommended during development), you can run: `npm run cypress`
-
-If you wish to only run Jest tests, you can run `npm run jest` like normal and target specific tests. You can specify command line config options to forward to the jest command with `--` like so: `npm run jest -- --watch`
+For more information read [the current blog post](https://www.wittyprogramming.dev/articles/starter-tailwind-alpine/)
