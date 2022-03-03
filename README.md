@@ -1,31 +1,20 @@
-# Landing Starter Template using TailwindCSS and AlpineJs
+## Introduction
 
-An opinionated starter template based on Tailwind CSS, Alpine.js, postcss and esbuild.
+This simple todos application is written using [Tailwind CSS](https://tailwindcss.com/), [Alpine JS](https://alpinejs.dev/), and <!--Tailwind and -->the [Streams API Client](https://streams.dev/docs/api/client).
 
-It is an opinionated template that has the following features:
+### API Server
 
-- Tailwind CSS for styling
-- Alpine.js for template/dynamic logic
-- a simple build system which may help me scale up if the needs arise (for example, add scss for styles or Typescript)
+You will need to install the accompanying API server to run this application.
 
-[Tailwind CSS](https://tailwindcss.com/) is a highly customizable, low-level CSS framework that is gaining popularity lately.  It is not opinionated as it gives you the building blocks for styling your components.
+- [Todos Backend](https://github.com/laravel-streams/todos-backend)
 
-[Alpine.js](https://github.com/alpinejs/alpine) is very similar to tailwind but for the javascript. It provides the features of [Vue.js](https://vuejs.org/) with a much lower cost and - I think - a most suitable replacement for [jQuery](https://jquery.com/) than other frameworks.
+## Getting Started
 
-For an HTML starter base, the gorgeous, simple, and versatile landing page design from the [Creative Tim's Tailwind Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)  is used.
+- Clone this repository locally.
+- Run `npm install` within the project.
+- Run `cp .env.example .env` and adjust as needed.
+- Use `npm run serve` to start your local server.
 
-During the development (for the watch mode) use:
+## The Basics
 
-```shell
-npm start
-```
-
-For deployment, run:
-
-```shell
-npm run deploy
-```
-
-The output web page is at `dist` folder.
-
-For more information read [the current blog post](https://www.wittyprogramming.dev/articles/starter-tailwind-alpine/)
+For reference, the API Client is configured within `src/streams.ts` and used within `src/store/index.ts`.
